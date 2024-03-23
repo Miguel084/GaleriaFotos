@@ -1,0 +1,6 @@
+@GaleriaFotos.Server_HostAddress = http://localhost:5062
+
+GET {{GaleriaFotos.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

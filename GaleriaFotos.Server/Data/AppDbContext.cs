@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using GaleriaFotos.Server.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace GaleriaFotos.Server.Data
 {
@@ -14,5 +15,6 @@ namespace GaleriaFotos.Server.Data
             optionsBuilder.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
         }
         // !!SEUS MODELS AQUI!!
+        public DbSet<Fotos> fotos { get; set; }
     }
 }

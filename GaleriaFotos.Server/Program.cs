@@ -10,7 +10,7 @@ namespace GaleriaFotos.Server
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+            string connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new ArgumentNullException("String de conexão não encontrada no arquivo de configuração"); ;
 
             builder.Services.AddDbContext<AppDbContext>(options =>
             {

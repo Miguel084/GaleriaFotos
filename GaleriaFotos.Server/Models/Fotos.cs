@@ -1,16 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GaleriaFotos.Server.Models
 {
-    public class Fotos 
+    public class Fotos
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int FotosId { get; set; }
 
         [Required]
-        public required string Imagem { get; set; }
+        public string? Imagem { get; set; }
 
         [Required]
         public required string Nome { get; set; }
